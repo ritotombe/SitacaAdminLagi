@@ -122,14 +122,14 @@ public class PengumumanActivity extends ActionBarActivity {
             {
                 Toast.makeText(
                         getApplicationContext(),
-                        "Peringatan: Belum ada Pengumuman yang dipilih",
+                        "Peringatan : Belum ada pengumuman yang dipilih.",
                         Toast.LENGTH_SHORT
                 ).show();
             }
             else {
                 new AlertDialog.Builder(this)
                         .setTitle("Konfirmasi")
-                        .setMessage("Apakah "+fragment.deleteList.size()+" Pengumuman yang anda pilih ingin dihapus?")
+                        .setMessage("Apakah "+fragment.deleteList.size()+" pengumuman yang anda pilih ingin dihapus?")
                         .setIcon(android.R.drawable.ic_dialog_alert)
                         .setPositiveButton("Iya", new DialogInterface.OnClickListener() {
 
@@ -305,7 +305,7 @@ public class PengumumanActivity extends ActionBarActivity {
                     "getdata.php",
                     params,
                     getActivity(),
-                    "Daftar Pengumuman")
+                    "Memuat Pengumuman")
             {
                 @Override
                 protected void onPostExecute(JSONArray data) {
@@ -347,7 +347,7 @@ public class PengumumanActivity extends ActionBarActivity {
                             else{
                                 Toast.makeText(
                                         getActivity(),
-                                        "Kesalahan: Anda tidak tersambung ke internet",
+                                        "Kesalahan : Anda tidak tersambung ke internet.",
                                         Toast.LENGTH_SHORT
                                 ).show();
                             }

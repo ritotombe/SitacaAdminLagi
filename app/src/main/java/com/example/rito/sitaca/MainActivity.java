@@ -102,7 +102,7 @@ public class MainActivity extends ActionBarActivity {
         else{
             Toast.makeText(
                 getApplicationContext(),
-                "Kesalahan: Anda tidak tersambung ke internet",
+                "Kesalahan : Anda tidak tersambung ke internet.",
                 Toast.LENGTH_SHORT
             ).show();
         }
@@ -116,7 +116,7 @@ public class MainActivity extends ActionBarActivity {
         else{
             Toast.makeText(
                 getApplicationContext(),
-                "Kesalahan: Anda tidak tersambung ke internet",
+                "Kesalahan : Anda tidak tersambung ke internet.",
                 Toast.LENGTH_SHORT
             ).show();
         }
@@ -129,7 +129,7 @@ public class MainActivity extends ActionBarActivity {
         else{
             Toast.makeText(
                 getApplicationContext(),
-                "Kesalahan: Anda tidak tersambung ke internet",
+                "Kesalahan : Anda tidak tersambung ke internet.",
                 Toast.LENGTH_SHORT
             ).show();
         }
@@ -142,7 +142,7 @@ public class MainActivity extends ActionBarActivity {
        else{
             Toast.makeText(
                 getApplicationContext(),
-                "Kesalahan: Anda tidak tersambung ke internet",
+                "Kesalahan : Anda tidak tersambung ke internet.",
                 Toast.LENGTH_SHORT
             ).show();
         }
@@ -155,7 +155,7 @@ public class MainActivity extends ActionBarActivity {
         else{
             Toast.makeText(
                 getApplicationContext(),
-                "Kesalahan: Anda tidak tersambung ke internet",
+                "Kesalahan : Anda tidak tersambung ke internet.",
                 Toast.LENGTH_SHORT
             ).show();
         }
@@ -168,7 +168,7 @@ public class MainActivity extends ActionBarActivity {
         else{
             Toast.makeText(
                 getApplicationContext(),
-                "Kesalahan: Anda tidak tersambung ke internet",
+                "Kesalahan : Anda tidak tersambung ke internet.",
                 Toast.LENGTH_SHORT
             ).show();
         }
@@ -182,7 +182,7 @@ public class MainActivity extends ActionBarActivity {
         else{
             Toast.makeText(
                 getApplicationContext(),
-                "Kesalahan: Anda tidak tersambung ke internet",
+                "Kesalahan : Anda tidak tersambung ke internet.",
                 Toast.LENGTH_SHORT
             ).show();
         }
@@ -194,7 +194,7 @@ public class MainActivity extends ActionBarActivity {
         else{
             Toast.makeText(
                 getApplicationContext(),
-                "Kesalahan: Anda tidak tersambung ke internet",
+                "Kesalahan : Anda tidak tersambung ke internet.",
                 Toast.LENGTH_SHORT
             ).show();
         }

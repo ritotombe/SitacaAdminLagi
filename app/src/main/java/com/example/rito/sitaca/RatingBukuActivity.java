@@ -219,7 +219,7 @@ public class RatingBukuActivity extends ActionBarActivity {
                     "getdata.php",
                     params,
                     getActivity(),
-                    "Daftar Buku") {
+                    "Memuat Buku") {
                 @Override
                 protected void onPostExecute(JSONArray data) {
                     pDialog.dismiss();
@@ -251,7 +251,7 @@ public class RatingBukuActivity extends ActionBarActivity {
                     else {
                         Toast.makeText(
                                 getActivity(),
-                                "Tidak Ada Buku",
+                                "Tidak ada buku.",
                                 Toast.LENGTH_SHORT
                         ).show();
                     }

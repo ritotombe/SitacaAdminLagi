@@ -180,7 +180,7 @@ public class DetailTBActivity extends ActionBarActivity {
                             pDialog.dismiss();
                             Log.d("asd", "" + data);
                             if (data == null) {
-                                errorToast("Kesalahan: TB tidak berhasil diubah.");
+                                errorToast("Kesalahan : TB tidak berhasil diubah.");
                             } else {
                                 try {
                                     errorToast(data.get(0).toString());
