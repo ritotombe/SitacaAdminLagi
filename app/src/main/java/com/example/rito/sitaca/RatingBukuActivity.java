@@ -216,7 +216,7 @@ public class RatingBukuActivity extends ActionBarActivity {
             params.add(new BasicNameValuePair("tag", "buku"));
             params.add(new BasicNameValuePair("id", "" + id));
             RequestData requestData = new RequestData(
-                    "http://ritotom.be/sitacaapi/getdata.php",
+                    "getdata.php",
                     params,
                     getActivity(),
                     "Daftar Buku") {
