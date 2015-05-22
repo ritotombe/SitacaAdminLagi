@@ -101,6 +101,7 @@ public class UbahAdminActivity extends ActionBarActivity {
             }
             if(String.valueOf(noTelp.getText()).equalsIgnoreCase("")){
                 errorToast("Kesalahan : Nomor telepon pengguna belum terisi.");
+                goodToGo = false;
             }
             if(String.valueOf(email.getText()).equalsIgnoreCase("")){
                 errorToast("Kesalahan : Email pengguna belum terisi.");

@@ -70,6 +70,7 @@ public class TerimaUserActivity extends ActionBarActivity {
         private View rootView;
         int id_user,id_tb;
 
+
         void errorToast(String e){
             Toast.makeText(
                     rootView.getContext(),

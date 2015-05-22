@@ -74,11 +74,13 @@ public class UbahPengumumanActivity extends ActionBarActivity {
                     Toast.LENGTH_SHORT
             ).show();
             return;
+
         }
 
         public void ubahPengumuman(){
             SharedPreferences pref = getActivity().getSharedPreferences("sitacaadmin",0);
             int id_admin = pref.getInt("id",-1);
+
             List<NameValuePair> params = new ArrayList<NameValuePair>();
             params.add(new BasicNameValuePair("aksi", "update"));
             params.add(new BasicNameValuePair("id", ""+id_pengumuman));//masih dummy krn login belom kelar
