@@ -124,7 +124,7 @@ public class UbahAdminActivity extends ActionBarActivity {
                     params.add(new BasicNameValuePair("email",String.valueOf(email.getText())));
                     params.add(new BasicNameValuePair("password",  password));
                     RequestData requestData = new RequestData(
-                            "http://ritotom.be/sitacaapi/admindao.php",
+                            "admindao.php",
                             params,
                             getActivity(),
                             "Mengubah Admin") {
@@ -224,7 +224,7 @@ public class UbahAdminActivity extends ActionBarActivity {
             Log.d("testt", "" + id);
             params.add(new BasicNameValuePair("id", ""+id));
             RequestData requestData = new RequestData(
-                    "http://ritotom.be/sitacaapi/admindao.php",
+                    "admindao.php",
                     params,
                     getActivity(),
                     "Memuat Admin")
