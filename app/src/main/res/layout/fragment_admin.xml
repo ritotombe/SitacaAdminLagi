@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.rito.sitaca.AdminActivity$PlaceholderFragment">
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_margin"
+        android:dividerHeight="0dp"
+        android:id="@+id/itemList"
+        android:clickable="false"
+        android:background="@drawable/main_buttons">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/activity_margin"
+            android:paddingBottom="@dimen/activity_margin"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Nama User"
+            android:id="@+id/namaAdmin"
+            android:layout_gravity="left|center_vertical"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:dividerHeight="0dp"
+        android:divider="@android:color/transparent"
+        android:id="@+id/listViewAdmin"
+        />
+
+</LinearLayout>

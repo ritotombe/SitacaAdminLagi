@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="0dp"
+    android:dividerHeight="0dp"
+    android:id="@+id/itemList"
+    android:clickable="false"
+    android:background="@drawable/main_buttons">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewLogHarianMainBox"
+        android:paddingLeft="16dp"
+        android:background="@drawable/main_buttons">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="dd/mm/yyyy"
+            android:id="@+id/viewTanggal"
+            android:layout_gravity="left|center_vertical"/>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jumlah kehadiran :"
+                android:layout_gravity="left|center_vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jumlah Kehadiran"
+                android:id="@+id/viewJumlahKehadiran"
+                android:layout_gravity="left|center_vertical"/>
+        </LinearLayout>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:paddingBottom="@dimen/activity_margin"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hh:mm"
+                android:id="@+id/viewRealisasiJamBuka"
+                android:layout_gravity="left|center_vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" - "
+                android:layout_gravity="left|center_vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hh:mm"
+                android:id="@+id/viewRealisasiJamTutup"
+                android:layout_gravity="left|center_vertical"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

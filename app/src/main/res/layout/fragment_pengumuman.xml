@@ -1,0 +1,32 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rito.sitaca.PengumumanActivity$PlaceholderFragment"
+    android:theme="@style/AppTheme"
+    android:background="#eaeaea">
+
+
+    <ListView
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:dividerHeight="0dp"
+        android:divider="@android:color/transparent"
+        android:id="@+id/listViewPengumuman"
+        />
+
+    <ImageButton
+        android:id="@+id/add_button"
+        android:layout_width="@dimen/diameter"
+        android:layout_height="@dimen/diameter"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="@dimen/add_button_margin"
+        android:layout_marginEnd="@dimen/add_button_margin"
+        android:layout_marginRight="@dimen/add_button_margin"
+        android:src="@android:drawable/ic_input_add"
+        android:tint="@android:color/white"
+        android:elevation="@dimen/elevation_low"
+        android:background="@drawable/add_button_oval"
+        android:onClick="showTambahPengumuman"/>
+
+</FrameLayout>

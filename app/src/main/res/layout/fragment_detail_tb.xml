@@ -1,0 +1,140 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.rito.sitaca.DetailTBActivity$PlaceholderFragment"
+    android:id="@+id/detailTB">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Nama Pengguna"
+                android:textColor="#565656"
+                android:layout_marginTop="@dimen/layout_marginTop"/>
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/namaUser"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/layout_marginTop1"
+                android:background="@drawable/form_bg"
+                android:padding="@dimen/activity_margin"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Nama Taman Baca"
+                android:textColor="#565656"
+                android:layout_marginTop="@dimen/layout_marginTop"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/namaTB"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/layout_marginTop1"
+                android:editable="false"
+                android:background="#eee"
+                android:padding="@dimen/activity_margin"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Alamat Taman Baca"
+                android:textColor="#565656"
+                android:layout_marginTop="@dimen/layout_marginTop"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/alamatTB"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/layout_marginTop1"
+                android:editable="false"
+                android:background="#eee"
+                android:padding="@dimen/activity_margin"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Twitter"
+                android:textColor="#565656"
+                android:layout_marginTop="@dimen/layout_marginTop"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/twitter"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/layout_marginTop1"
+                android:editable="false"
+                android:background="#eee"
+                android:padding="@dimen/activity_margin"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Facebook"
+                android:textColor="#565656"
+                android:layout_marginTop="@dimen/layout_marginTop"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/facebook"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/layout_marginTop1"
+                android:editable="false"
+                android:background="#eee"
+                android:padding="@dimen/activity_margin"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Simpan"
+                android:textColor="#fff"
+                android:id="@+id/button"
+                android:layout_below="@+id/scrollView"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/activity_margin"
+                android:background="@drawable/save_button"
+                android:padding="@dimen/activity_margin"
+                android:layout_gravity="right" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+

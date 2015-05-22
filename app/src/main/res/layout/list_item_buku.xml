@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="0dp"
+    android:dividerHeight="0dp"
+    android:id="@+id/itemList"
+    android:clickable="false"
+    android:background="@drawable/main_buttons">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewBukuMainBox"
+        android:paddingLeft="16dp"
+        android:background="@drawable/main_buttons">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="buku"
+            android:id="@+id/viewJudul"
+            android:layout_gravity="left|center_vertical"/>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kategori : "
+                android:layout_gravity="left|center_vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kategori"
+                android:id="@+id/viewKategori"
+                android:layout_gravity="left|center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rating : "
+                android:layout_gravity="left|center_vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="rating"
+                android:id="@+id/viewRating"
+                android:layout_gravity="left|center_vertical"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

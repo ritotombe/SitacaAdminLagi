@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.rito.sitaca.AdminActivity">
+    <item
+        android:id="@+id/delete"
+        android:icon="@mipmap/ic_delete"
+        android:title="Pengembalian"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/search"
+        android:icon="@mipmap/ic_search"
+        android:title="Search"
+        app:showAsAction="always"
+        app:actionViewClass="android.widget.SearchView"/>
+</menu>

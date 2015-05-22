@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.rito.sitaca" >
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <android:uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:logo="@mipmap/ic_launcher"
+        android:theme="@style/CustomActionBarTheme" >
+        <activity
+            android:name=".SplashScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:icon="@drawable/ic_sitaca_action"
+            android:label="@string/app_name"
+            android:logo="@drawable/ic_sitaca_action"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name=".LihatLogKegiatanActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_lihat_log_kegiatan"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rito.sitaca.MainActivity" />
+        </activity>
+        <activity
+            android:name=".LihatTamanBacaActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_lihat_taman_baca"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rito.sitaca.MainActivity" />
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name=".UserActivity"
+            android:label="@string/title_activity_user" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rito.sitaca.MainActivity" />
+        </activity>
+        <activity
+            android:name=".TerimaUserActivity"
+            android:label="@string/title_activity_terima_user" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rito.sitaca.UserActivity" />
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name=".PengumumanActivity"
+            android:label="@string/title_activity_pengumuman"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rito.sitaca.MainActivity" />
+        </activity>
+        <activity
+            android:name=".TambahPengumumanActivity"
+            android:label="@string/title_activity_tambah_pengumuman"
+            android:parentActivityName=".PengumumanActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rito.sitaca.PengumumanActivity" />
+        </activity>
+        <activity
+            android:name=".UbahPengumumanActivity"
+            android:label="@string/title_activity_ubah_pengumuman"
+            android:parentActivityName=".PengumumanActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rito.sitaca.PengumumanActivity" />
+        </activity>
+        <activity
+            android:name=".TambahAdminActivity"
+            android:label="@string/title_activity_tambah_admin"
+            android:parentActivityName=".LoginActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rito.sitaca.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".DetailTBActivity"
+            android:label="@string/title_activity_detail_tb" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rito.sitaca.LihatTamanBacaActivity" />
+        </activity>
+        <activity
+            android:name=".LogHarianActivity"
+            android:label="@string/title_activity_log_harian" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rito.sitaca.LihatTamanBacaActivity" />
+        </activity>
+        <activity
+            android:name=".SummaryBukuActivity"
+            android:label="@string/title_activity_summary_buku" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rito.sitaca.LihatTamanBacaActivity" />
+        </activity>
+        <activity
+            android:name=".RatingBukuActivity"
+            android:label="@string/title_activity_rating_buku" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rito.sitaca.LihatTamanBacaActivity" />
+        </activity>
+        <activity
+            android:name=".AdminActivity"
+            android:label="@string/title_activity_admin" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rito.sitaca.MainActivity" />
+        </activity>
+        <activity
+            android:name=".DetilAdminActivity"
+            android:label="@string/title_activity_detil_admin"
+            android:parentActivityName=".AdminActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rito.sitaca.AdminActivity" />
+        </activity>
+    </application>
+
+</manifest>

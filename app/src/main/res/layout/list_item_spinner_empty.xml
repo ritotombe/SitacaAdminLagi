@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:gravity="center_vertical|left"
+    android:text="test"
+    android:paddingRight="16pt"
+    android:paddingLeft="10pt"
+    android:textColor="#777"
+    android:id="@+id/emptySpinnerValue"
+    style="@android:style/TextAppearance.DeviceDefault.Medium" />

@@ -1,0 +1,152 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <!-- As the main content view, the view below consumes the entire
+         space available using match_parent in both dimensions. -->
+
+    <!-- android:layout_gravity="start" tells DrawerLayout to treat
+         this as a sliding drawer on the left side for left-to-right
+         languages and on the right side for right-to-left languages.
+         The drawer is given a fixed width in dp and extends the full height of
+         the container. A solid background is used for contrast
+         with the content view. -->
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:background="@drawable/main_buttons"
+                    android:gravity="center"
+                    android:onClick="showTbSekitar"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/icon_log_harian" />
+
+                    <TextView
+                        android:id="@+id/buttonLogHarian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/activity_margin"
+                        android:background="#fff"
+                        android:text="Informasi Taman Baca"
+                        android:textColor="#37474F"></TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:background="@drawable/main_buttons"
+                    android:gravity="center"
+                    android:onClick="showPengumuman"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/icon_sitaca_splash" />
+
+                    <TextView
+                        android:id="@+id/buttonTbSekitar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/activity_margin"
+                        android:text="Pengumuman"
+                        android:textColor="#37474F"></TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:background="@drawable/main_buttons"
+                    android:gravity="center"
+                    android:onClick="showUser"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/icon_anggota" />
+
+                    <TextView
+                        android:id="@+id/buttonKeanggotaan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/activity_margin"
+                        android:text="Terima User"
+                        android:textColor="#37474F">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:background="@drawable/main_buttons"
+                    android:gravity="center"
+                    android:onClick="showAdmin"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/icon_admin" />
+
+                    <TextView
+                        android:id="@+id/buttonn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/activity_margin"
+                        android:text="Kelola Admin"
+                        android:textColor="#37474F">
+
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>
