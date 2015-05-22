@@ -33,6 +33,7 @@ import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -52,6 +53,18 @@ public class AdminActivity extends ActionBarActivity {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, fragment)
                     .commit();
+        }
+    }
+
+    protected void onResume()
+    {
+        super.onResume();
+        try {
+            fragment.populateList();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
@@ -147,7 +160,7 @@ public class AdminActivity extends ActionBarActivity {
         public List<Admin> listAdmin;
         public List<Admin> deleteList;
         int id;
-        public String nama;
+        // public String nama;
 
 
 
@@ -160,19 +173,20 @@ public class AdminActivity extends ActionBarActivity {
                 int cnt = 0;
                 for (int i = 0; i < deleteList.size(); i++) {
 
-                        if (deleteId == null) {
-                            deleteId = ""+ deleteList.get(i).getId_admin();
-                        } else {
-                            deleteId = deleteId+","+ deleteList.get(i).getId_admin();
-                        }
-                        cnt++;
+                    if (deleteId == null) {
+                        deleteId = ""+ deleteList.get(i).getId_admin();
+                    } else {
+                        deleteId = deleteId+","+ deleteList.get(i).getId_admin();
+                    }
+                    cnt++;
+
                 }
                 // Log.d("del",deleteId);
                 List<NameValuePair> params = new ArrayList<NameValuePair>();
                 params.add(new BasicNameValuePair("aksi", "hapus"));
                 params.add(new BasicNameValuePair("del_id", deleteId));
                 RequestData requestData = new RequestData(
-                        "userdao.php",
+                        "http://ritotom.be/sitacaapi/userdao.php",
                         params,
                         getActivity(),
                         "Menghapus Admin")
@@ -218,14 +232,32 @@ public class AdminActivity extends ActionBarActivity {
             mListViewAdmin = (ListView) rootView.findViewById(R.id.listViewAdmin);
             listAdmin = new ArrayList<>();
             namaAdmin = (TextView) rootView.findViewById(R.id.namaAdmin);
-            Log.d("test",nama);
-            namaAdmin.setText(nama);
+            //Log.d("test",nama);
+            namaAdmin.setText("");
 
+
+            namaAdmin.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (new Connection().checkConnection(getActivity())) {
+                        Intent intent = new Intent(rootView.getContext(), UbahAdminActivity.class);
+                        intent.putExtra("id", id);
+                        startActivity(intent);
+                        getActivity().finish();
+                    } else {
+                        Toast.makeText(
+                                getActivity(),
+                                "Kesalahan: Anda tidak tersambung ke internet",
+                                Toast.LENGTH_SHORT
+                        ).show();
+                    }
+                }
+            });
 
             List<NameValuePair> params = new ArrayList<NameValuePair>();
             params.add(new BasicNameValuePair("tag", "admin"));
             RequestData requestData = new RequestData(
-                    "getdata.php",
+                    "http://ritotom.be/sitacaapi/getdata.php",
                     params,
                     getActivity(),
                     "Memuat Admin") {
@@ -240,17 +272,21 @@ public class AdminActivity extends ActionBarActivity {
                             try {
                                 JSONObject o = jsonArray.getJSONObject(i);
                                 Admin admin = new Admin(
-                                    o.getInt("id"),
-                                    o.getString("nama"),
-                                    o.getString("alamat"),
-                                    o.getString("jabatan"),
-                                    o.getString("notelp"),
-                                    o.getString("email"),
-                                    o.getString("password"),
-                                    o.getInt("status")
+                                        o.getInt("id"),
+                                        o.getString("nama"),
+                                        o.getString("alamat"),
+                                        o.getString("jabatan"),
+                                        o.getString("notelp"),
+                                        o.getString("email"),
+                                        o.getString("password"),
+                                        o.getInt("status")
                                 );
                                 if(o.getInt("id")!=id)
                                     listAdmin.add(admin);
+                                else{
+                                    //nama = admin.getNama();
+                                    namaAdmin.setText(admin.getNama());
+                                }
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
@@ -272,10 +308,10 @@ public class AdminActivity extends ActionBarActivity {
                         @Override
                         public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
                             if (new Connection().checkConnection(getActivity())) {
-                                Intent intent = new Intent(rootView.getContext(), TerimaUserActivity.class);
+                                Intent intent = new Intent(rootView.getContext(), DetilAdminActivity.class);
                                 intent.putExtra("id", listAdmin.get(position).getId_admin());
                                 startActivity(intent);
-                                getActivity().finish();
+                                //getActivity().finish();
                             }
                             else{
                                 Toast.makeText(
@@ -284,12 +320,10 @@ public class AdminActivity extends ActionBarActivity {
                                         Toast.LENGTH_SHORT
                                 ).show();
                             }
-                            Intent intent = new Intent(rootView.getContext(), DetilAdminActivity.class);
-                            intent.putExtra("id", listAdmin.get(position).getId_admin());
-                            startActivity(intent);
-                            getActivity().finish();
+
                         }
                     });
+
 
 
                 }
@@ -303,8 +337,8 @@ public class AdminActivity extends ActionBarActivity {
                                  Bundle savedInstanceState) {
             rootView = inflater.inflate(R.layout.fragment_admin, container, false);
             SharedPreferences pref = getActivity().getSharedPreferences("sitacaadmin", 0);
-            id = pref.getInt("id",-1);
-            nama = pref.getString("nama",null);
+            id = pref.getInt("id", -1);
+            //nama = pref.getString("nama",null);
             deleteList = new ArrayList<Admin>();
 
             try {
@@ -344,6 +378,8 @@ public class AdminActivity extends ActionBarActivity {
                     viewHolder.nama = (TextView) view.findViewById(R.id.viewNamaAdmin);
                     viewHolder.notelp = (TextView) view.findViewById(R.id.viewNoTelp);
                     viewHolder.email = (TextView) view.findViewById(R.id.viewEmail);
+                    viewHolder.status = (TextView) view.findViewById(R.id.viewStatus);
+
                     viewHolder.cb = (CheckBox) view.findViewById(R.id.delCb);
                     view.setTag(viewHolder);
                 } else { //--> Kalo udah ada viewnya, holdernya diambil dari tag
@@ -368,6 +404,13 @@ public class AdminActivity extends ActionBarActivity {
                 viewHolder.nama.setText(currentAdmin.getNama());
                 viewHolder.notelp.setText(currentAdmin.getNoTelp());
                 viewHolder.email.setText(currentAdmin.getEmail());
+                int st = currentAdmin.getStatus();
+                if(st == 0){
+                    viewHolder.status.setText("Belum disetujui");
+                }
+                else{
+                    viewHolder.status.setText("Aktif");
+                }
                 if (deleteList.contains(currentAdmin))
                     viewHolder.cb.setChecked(true);
                 if (!deleteList.contains(currentAdmin))
@@ -396,6 +439,7 @@ public class AdminActivity extends ActionBarActivity {
                 TextView nama;
                 TextView notelp;
                 TextView email;
+                TextView status;
                 CheckBox cb;
             }
         }

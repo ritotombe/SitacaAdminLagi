@@ -155,6 +155,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.rito.sitaca.AdminActivity" />
         </activity>
+        <activity
+            android:name=".TerimaAdminActivity"
+            android:label="@string/title_activity_terima_admin"
+            android:parentActivityName=".AdminActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rito.sitaca.AdminActivity" />
+        </activity>
+        <activity
+            android:name=".UbahAdminActivity"
+            android:label="@string/title_activity_ubah_admin"
+            android:parentActivityName=".AdminActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rito.sitaca.AdminActivity" />
+        </activity>
     </application>
 
 </manifest>

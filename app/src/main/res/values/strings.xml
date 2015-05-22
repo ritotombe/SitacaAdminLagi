@@ -50,4 +50,6 @@
     <string name="title_activity_summary_buku">Ringkasan Buku</string>
     <string name="title_activity_rating_buku">Rating Buku</string>
     <string name="title_activity_detil_admin">Detil Admin</string>
+    <string name="title_activity_terima_admin">TerimaAdminActivity</string>
+    <string name="title_activity_ubah_admin">UbahAdminActivity</string>
 </resources>
