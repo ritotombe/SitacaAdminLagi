@@ -71,7 +71,7 @@ public class UbahAdminActivity extends ActionBarActivity {
         void errorToast(String e){
             Toast.makeText(
                     rootView.getContext(),
-                    "Kesalahan : " + e,
+                    "" + e,
                     Toast.LENGTH_SHORT
             ).show();
             return;
@@ -88,26 +88,26 @@ public class UbahAdminActivity extends ActionBarActivity {
             boolean goodToGo = true;
 
             if(String.valueOf(nama.getText()).equalsIgnoreCase("")){
-                errorToast("Nama pengguna belum diisi.");
+                errorToast("Kesalahan : Nama pengguna belum terisi.");
                 goodToGo = false;
             }
             if(String.valueOf(alamat.getText()).equalsIgnoreCase("")){
-                errorToast("Alamat pengguna belum diisi.");
+                errorToast("Kesalahan : Alamat pengguna belum terisi.");
                 goodToGo = false;
             }
             if(String.valueOf(jabatan.getText()).equalsIgnoreCase("")){
-                errorToast("Jabatan pengguna belum diisi.");
+                errorToast("Kesalahan : Jabatan pengguna belum terisi.");
                 goodToGo = false;
             }
             if(String.valueOf(noTelp.getText()).equalsIgnoreCase("")){
-                errorToast("Nomor telepon pengguna belum diisi.");
+                errorToast("Kesalahan : Nomor telepon pengguna belum terisi.");
             }
             if(String.valueOf(email.getText()).equalsIgnoreCase("")){
-                errorToast("Email pengguna belum diisi.");
+                errorToast("Kesalahan : Email pengguna belum terisi.");
                 goodToGo = false;
             }
             if(!isValidEmail(String.valueOf(email.getText()))){
-                errorToast("Format Email Salah");
+                errorToast("Kesalahan : Format email tidak sesuai.");
                 goodToGo = false;
             }
             if(goodToGo){
@@ -133,7 +133,7 @@ public class UbahAdminActivity extends ActionBarActivity {
                             pDialog.dismiss();
                             if(data!=null) {
                                 try {
-                                    if (data.get(0).toString().equalsIgnoreCase("Perubahan Admin berhasil disimpan")) {
+                                    if (data.get(0).toString().equalsIgnoreCase("Perubahan Admin berhasil disimpan.")) {
                                         Toast.makeText(
                                                 rootView.getContext(),
                                                 data.get(0).toString(),
@@ -271,17 +271,17 @@ public class UbahAdminActivity extends ActionBarActivity {
                 public void onClick(View v) {
                     // Log.d("Admin*", " "+pass.getText().toString());
                     if(pass.getText().toString().equalsIgnoreCase("")){
-                        errorToast("Kata sandi belum diisi");
+                        errorToast("Kesalahan : Kata sandi belum terisi.");
                     }
                     else if(pass.getText().toString().equals(admin.getPassword())){
                         if(nPass.getText().toString().equalsIgnoreCase("") && nKonpass.getText().toString().equalsIgnoreCase("")) {
                             ubahAdmin(admin.getPassword());
                         }
                         else if (nPass.getText().toString().equalsIgnoreCase("")) {
-                            errorToast("Kata sandi baru pengguna belum diisi.");
+                            errorToast("Kesalahan : Kata sandi baru pengguna belum terisi.");
                         }
                         else if (nKonpass.getText().toString().equalsIgnoreCase("")) {
-                            errorToast("Konfirmasi kata sandi baru pengguna belum diisi.");
+                            errorToast("Kesalahan : Konfirmasi kata sandi baru pengguna belum terisi.");
                         }
                         else{
                             if(nPass.getText().toString().equals(nKonpass.getText().toString()))
@@ -289,12 +289,12 @@ public class UbahAdminActivity extends ActionBarActivity {
                                 ubahAdmin(nPass.getText().toString());
                             }
                             else{
-                                errorToast("Kata sandi baru dan konfirmasi kata sandi baru tidak sesuai.");
+                                errorToast("Kesalahan : Kata sandi baru dan konfirmasi kata sandi baru tidak sesuai.");
                             }
                         }
                     }
                     else{
-                        errorToast("Kata sandi tidak sesuai");
+                        errorToast("Kesalahan : Kata sandi tidak sesuai.");
                     }
                 }
             });

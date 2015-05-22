@@ -226,7 +226,7 @@ public class SummaryBukuActivity extends ActionBarActivity {
                     "getdata.php",
                     params,
                     getActivity(),
-                    "Daftar Ringkasan Buku") {
+                    "Memuat Ringkasan Buku") {
                 @Override
                 protected void onPostExecute(JSONArray data) {
                     pDialog.dismiss();
@@ -255,7 +255,7 @@ public class SummaryBukuActivity extends ActionBarActivity {
                     else {
                         Toast.makeText(
                                 getActivity(),
-                                "Tidak Ada Ringkasan Buku",
+                                "Tidak ada ringkasan buku.",
                                 Toast.LENGTH_SHORT
                         ).show();
                     }

@@ -127,11 +127,11 @@ public class TambahPengumumanActivity extends ActionBarActivity {
                     boolean goodToGo = true;
 
                     if(String.valueOf(judulPengumuman.getText()).equalsIgnoreCase("")){
-                        errorToast("Nama pengguna belum diisi.");
+                        errorToast("Kesalahan : Nama pengguna belum terisi.");
                         goodToGo = false;
                     }
                     if(String.valueOf(isiPengumuman.getText()).equalsIgnoreCase("")){
-                        errorToast("Alamat pengguna belum diisi.");
+                        errorToast("Kesalahan : Alamat pengguna belum terisi.");
                         goodToGo = false;
                     }
                     if(goodToGo){

@@ -107,40 +107,40 @@ public class TambahAdminActivity extends ActionBarActivity {
             boolean goodToGo = true;
 
             if(String.valueOf(nama.getText()).equalsIgnoreCase("")){
-                errorToast("Nama pengguna belum diisi.");
+                errorToast("Kesalahan : Nama pengguna belum terisi.");
                 goodToGo = false;
             }
             if(String.valueOf(alamat.getText()).equalsIgnoreCase("")){
-                errorToast("Alamat pengguna belum diisi.");
+                errorToast("Kesalahan : Alamat pengguna belum terisi.");
                 goodToGo = false;
             }
             if(String.valueOf(jabatan.getText()).equalsIgnoreCase("")){
-                errorToast("Jabatan pengguna belum diisi.");
+                errorToast("Kesalahan : Jabatan pengguna belum terisi.");
                 goodToGo = false;
             }
             if(String.valueOf(notelp.getText()).equalsIgnoreCase("")){
-                errorToast("Nomor telepon pengguna belum diisi.");
+                errorToast("Kesalahan : Nomor telepon pengguna belum terisi.");
             }
             if(String.valueOf(email.getText()).equalsIgnoreCase("")){
-                errorToast("Email pengguna belum diisi.");
+                errorToast("Kesalahan : Email pengguna belum terisi.");
                 goodToGo = false;
             }
             if(!isValidEmail(String.valueOf(email.getText()))){
-                errorToast("Format Email Salah");
+                errorToast("Kesalahan : Format email tidak sesuai.");
                 goodToGo = false;
             }
             if(pass.getText().toString().equalsIgnoreCase("")){
-                errorToast("Kata sandi pengguna belum diisi.");
+                errorToast("Kesalahan : Kata sandi pengguna belum terisi.");
                 goodToGo = false;
             }
             if(konpass.getText().toString().equalsIgnoreCase("")){
-                errorToast("Konfirmasi kata sandi pengguna belum diisi.");
+                errorToast("Kesalahan : Konfirmasi kata sandi pengguna belum terisi.");
                 goodToGo = false;
             }
             if(!(pass.getText().toString().equalsIgnoreCase("")) && !(konpass.getText().toString().equalsIgnoreCase("")))
             {
                 if(!(pass.getText().toString().equals(konpass.getText().toString()))){
-                    errorToast("Kata sandi dan konfirmasi kata sandi tidak sama.");
+                    errorToast("Kesalahan : Kata sandi dan konfirmasi kata sandi tidak sama.");
                     goodToGo = false;
                 }
                 if(goodToGo){
@@ -178,7 +178,7 @@ public class TambahAdminActivity extends ActionBarActivity {
                                     getActivity().finish();
                                 }
                                 else {
-                                    errorToast("Kesalahan : Email anda sudah terpakai");
+                                    errorToast("Kesalahan : Email anda sudah terpakai.");
                                 }
                             }
                         };

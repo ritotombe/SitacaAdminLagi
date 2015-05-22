@@ -70,7 +70,7 @@ public class UbahPengumumanActivity extends ActionBarActivity {
         void errorToast(String e){
             Toast.makeText(
                     rootView.getContext(),
-                    "Kesalahan : " + e,
+                    "" + e,
                     Toast.LENGTH_SHORT
             ).show();
             return;
@@ -164,11 +164,11 @@ public class UbahPengumumanActivity extends ActionBarActivity {
                     boolean goodToGo = true;
 
                     if(String.valueOf(judul.getText()).equalsIgnoreCase("")){
-                        errorToast("Nama pengguna belum diisi.");
+                        errorToast("Kesalahan : Nama pengguna belum terisi.");
                         goodToGo = false;
                     }
                     if(String.valueOf(isi.getText()).equalsIgnoreCase("")){
-                        errorToast("Alamat pengguna belum diisi.");
+                        errorToast("Kesalahan : Alamat pengguna belum terisi.");
                         goodToGo = false;
                     }
                     if(goodToGo){
