@@ -98,7 +98,7 @@ public class TerimaUserActivity extends ActionBarActivity {
                     Log.d("asd", ""+data);
                     if(data == null)
                     {
-                        errorToast("Kesalahan: User tidak berhasil diubah");
+                        errorToast("Kesalahan : User tidak berhasil diubah.");
                     }
                     else
                     {
@@ -111,7 +111,7 @@ public class TerimaUserActivity extends ActionBarActivity {
                             else{
                                 Toast.makeText(
                                         getActivity(),
-                                        "Kesalahan: Anda tidak tersambung ke internet",
+                                        "Kesalahan : Anda tidak tersambung ke internet.",
                                         Toast.LENGTH_SHORT
                                 ).show();
                             }
@@ -129,7 +129,7 @@ public class TerimaUserActivity extends ActionBarActivity {
         {
             if(id_tb == -1)
             {
-                errorToast("User ini tidak mengelola taman baca");
+                errorToast("User ini tidak mengelola taman baca.");
             }
             else {
                 if (new Connection().checkConnection(getActivity())) {
@@ -142,7 +142,7 @@ public class TerimaUserActivity extends ActionBarActivity {
                 else{
                     Toast.makeText(
                             getActivity(),
-                            "Kesalahan: Anda tidak tersambung ke internet",
+                            "Kesalahan : Anda tidak tersambung ke internet.",
                             Toast.LENGTH_SHORT
                     ).show();
                 }
@@ -167,7 +167,7 @@ public class TerimaUserActivity extends ActionBarActivity {
                     if(new Connection().checkConnection(getActivity()))
                     terimaUser();
                     else
-                        errorToast("Kesalahan : Anda tidak tersambung ke internet");
+                        errorToast("Kesalahan : Anda tidak tersambung ke internet.");
                 }
             });
             lihatTb = (Button) rootView.findViewById(R.id.buttonLihatTb);

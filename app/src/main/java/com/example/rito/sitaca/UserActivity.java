@@ -109,7 +109,7 @@ public class UserActivity extends ActionBarActivity {
             if (fragment.deleteList != null && fragment.deleteList.size() == 0) {
                 Toast.makeText(
                         getApplicationContext(),
-                        "Peringatan: Belum ada pengguna yang dipilih",
+                        "Peringatan : Belum ada pengguna yang dipilih.",
                         Toast.LENGTH_SHORT
                 ).show();
             } else {
@@ -166,7 +166,7 @@ public class UserActivity extends ActionBarActivity {
                     {
                         Toast.makeText(
                                 getActivity(),
-                                "Kesalahan : "+ deleteList.get(i).getNama() +" tidak dapat dihapus karena sedang mengelola taman baca",
+                                "Kesalahan : "+ deleteList.get(i).getNama() +" tidak dapat dihapus karena sedang mengelola taman baca.",
                                 Toast.LENGTH_SHORT
                         ).show();
                     }
@@ -189,7 +189,7 @@ public class UserActivity extends ActionBarActivity {
                         {
                             Toast.makeText(
                                     getActivity(),
-                                    "Kesalahan : Pilihan tidak dapat dihapus",
+                                    "Kesalahan : Pilihan tidak dapat dihapus.",
                                     Toast.LENGTH_SHORT
                             ).show();
                         }
@@ -259,7 +259,7 @@ public class UserActivity extends ActionBarActivity {
                     {
                         Toast.makeText(
                                 getActivity(),
-                                "Tidak Ada User",
+                                "Tidak ada user.",
                                 Toast.LENGTH_SHORT
                         ).show();
                     }
@@ -280,7 +280,7 @@ public class UserActivity extends ActionBarActivity {
                             else{
                                 Toast.makeText(
                                         getActivity(),
-                                        "Kesalahan: Anda tidak tersambung ke internet",
+                                        "Kesalahan : Anda tidak tersambung ke internet.",
                                         Toast.LENGTH_SHORT
                                 ).show();
                             }
