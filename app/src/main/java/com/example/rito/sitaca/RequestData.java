@@ -28,7 +28,7 @@ public class RequestData extends AsyncTask<String, String, JSONArray> {
     private String message;
     ProgressDialog pDialog;
     JSONParser jsonParser = new JSONParser();
-    JSONArray data = null;
+    public JSONArray data = null;
 
     public RequestData(String url, List<NameValuePair> params, Context context, String message){
 
@@ -96,6 +96,7 @@ public class RequestData extends AsyncTask<String, String, JSONArray> {
     @Override
     protected void onPostExecute(JSONArray json) {
         pDialog.dismiss();
+        data = null;
     }
 
 }

@@ -120,7 +120,15 @@ public class UserActivity extends ActionBarActivity {
                         .setPositiveButton("Iya", new DialogInterface.OnClickListener() {
 
                             public void onClick(DialogInterface dialog, int whichButton) {
-                                fragment.delete();
+                                if (new Connection().checkConnection(getApplicationContext()))
+                                    fragment.delete();
+                                else {
+                                    Toast.makeText(
+                                            fragment.rootView.getContext(),
+                                            "Kesalahan : Anda tidak tersambung ke internet.",
+                                            Toast.LENGTH_SHORT
+                                    ).show();
+                                }
                             }
 
                         })
@@ -250,10 +258,12 @@ public class UserActivity extends ActionBarActivity {
                                         o.getInt("id_tb")
                                 );
                                 listUser.add(user);
+
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
                         }
+
                     }
                     else
                     {

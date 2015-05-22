@@ -133,7 +133,15 @@ public class AdminActivity extends ActionBarActivity {
                         .setPositiveButton("Iya", new DialogInterface.OnClickListener() {
 
                             public void onClick(DialogInterface dialog, int whichButton) {
-                                fragment.delete();
+                                if (new Connection().checkConnection(getApplicationContext()))
+                                    fragment.delete();
+                                else {
+                                    Toast.makeText(
+                                            fragment.rootView.getContext(),
+                                            "Kesalahan : Anda tidak tersambung ke internet.",
+                                            Toast.LENGTH_SHORT
+                                    ).show();
+                                }
                             }
 
                         })
@@ -186,7 +194,7 @@ public class AdminActivity extends ActionBarActivity {
                 params.add(new BasicNameValuePair("aksi", "hapus"));
                 params.add(new BasicNameValuePair("del_id", deleteId));
                 RequestData requestData = new RequestData(
-                        "http://ritotom.be/sitacaapi/userdao.php",
+                        "userdao.php",
                         params,
                         getActivity(),
                         "Menghapus Admin")
@@ -291,6 +299,7 @@ public class AdminActivity extends ActionBarActivity {
                                 e.printStackTrace();
                             }
                         }
+
                     }
                     else
                     {

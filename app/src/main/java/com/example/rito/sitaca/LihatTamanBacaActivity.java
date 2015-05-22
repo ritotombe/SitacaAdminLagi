@@ -131,7 +131,15 @@ public class LihatTamanBacaActivity extends ActionBarActivity {
                         .setPositiveButton("Iya", new DialogInterface.OnClickListener() {
 
                             public void onClick(DialogInterface dialog, int whichButton) {
-                                fragment.delete();
+                                if (new Connection().checkConnection(getApplicationContext()))
+                                    fragment.delete();
+                                else {
+                                    Toast.makeText(
+                                            fragment.rootView.getContext(),
+                                            "Kesalahan : Anda tidak tersambung ke internet.",
+                                            Toast.LENGTH_SHORT
+                                    ).show();
+                                }
                             }
                         })
                         .setNegativeButton("Tidak", null).show();

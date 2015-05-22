@@ -84,7 +84,7 @@ public class TerimaAdminActivity extends ActionBarActivity {
             params.add(new BasicNameValuePair("aksi", "terima"));
             params.add(new BasicNameValuePair("id", ""+id_admin));
             RequestData requestData = new RequestData(
-                    "http://ritotom.be/sitacaapi/admindao.php",
+                    "admindao.php",
                     params,
                     getActivity(),
                     "Menerima User")
@@ -149,7 +149,7 @@ public class TerimaAdminActivity extends ActionBarActivity {
             params.add(new BasicNameValuePair("aksi", "lihat"));
             params.add(new BasicNameValuePair("id", ""+id));
             RequestData requestData = new RequestData(
-                    "http://ritotom.be/sitacaapi/admindao.php",
+                    "admindao.php",
                     params,
                     getActivity(),
                     "Memuat User")
