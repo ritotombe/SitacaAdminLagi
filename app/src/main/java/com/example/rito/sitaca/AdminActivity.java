@@ -56,7 +56,7 @@ public class AdminActivity extends ActionBarActivity {
         }
     }
 
-    protected void onResume()
+   /* protected void onResume()
     {
         super.onResume();
         try {
@@ -66,7 +66,7 @@ public class AdminActivity extends ActionBarActivity {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
 
     @Override
@@ -264,6 +264,7 @@ public class AdminActivity extends ActionBarActivity {
                 @Override
                 protected void onPostExecute(JSONArray data) {
                     pDialog.dismiss();
+                    Log.d("mylog",data.toString());
                     if(data != null) {
                         JSONArray jsonArray = data;
                         Log.d("cekid", "" + jsonArray);
