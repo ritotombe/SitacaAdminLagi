@@ -257,7 +257,7 @@ public class AdminActivity extends ActionBarActivity {
             List<NameValuePair> params = new ArrayList<NameValuePair>();
             params.add(new BasicNameValuePair("tag", "admin"));
             RequestData requestData = new RequestData(
-                    "http://ritotom.be/sitacaapi/getdata.php",
+                    "getdata.php",
                     params,
                     getActivity(),
                     "Memuat Admin") {
