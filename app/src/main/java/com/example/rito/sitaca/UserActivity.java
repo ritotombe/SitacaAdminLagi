@@ -200,6 +200,13 @@ public class UserActivity extends ActionBarActivity {
                                     "Kesalahan : Pilihan tidak dapat dihapus.",
                                     Toast.LENGTH_SHORT
                             ).show();
+                            try {
+                                populateList();
+                            } catch (ExecutionException e) {
+                                e.printStackTrace();
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
                         }
                         else {
                             try {
