@@ -172,7 +172,7 @@ public class LihatLogKegiatanActivity extends ActionBarActivity {
                     {
                         Toast.makeText(
                                 getActivity(),
-                                "Tidak Ada Kegiatan",
+                                "Tidak ada kegiatan.",
                                 Toast.LENGTH_SHORT
                         ).show();
                     }

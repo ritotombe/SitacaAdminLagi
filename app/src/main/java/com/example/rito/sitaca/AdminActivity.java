@@ -122,7 +122,7 @@ public class AdminActivity extends ActionBarActivity {
             if (fragment.deleteList != null && fragment.deleteList.size() == 0) {
                 Toast.makeText(
                         getApplicationContext(),
-                        "Peringatan: Belum ada admin yang dipilih",
+                        "Peringatan: Belum ada admin yang dipilih.",
                         Toast.LENGTH_SHORT
                 ).show();
             } else {
@@ -199,7 +199,7 @@ public class AdminActivity extends ActionBarActivity {
                         {
                             Toast.makeText(
                                     getActivity(),
-                                    "Kesalahan : Pilihan tidak dapat dihapus",
+                                    "Kesalahan : Pilihan tidak dapat dihapus.",
                                     Toast.LENGTH_SHORT
                             ).show();
                         }
@@ -247,7 +247,7 @@ public class AdminActivity extends ActionBarActivity {
                     } else {
                         Toast.makeText(
                                 getActivity(),
-                                "Kesalahan: Anda tidak tersambung ke internet",
+                                "Kesalahan: Anda tidak tersambung ke internet.",
                                 Toast.LENGTH_SHORT
                         ).show();
                     }
@@ -296,7 +296,7 @@ public class AdminActivity extends ActionBarActivity {
                     {
                         Toast.makeText(
                                 getActivity(),
-                                "Tidak Ada Admin",
+                                "Tidak ada admin",
                                 Toast.LENGTH_SHORT
                         ).show();
                     }
@@ -316,7 +316,7 @@ public class AdminActivity extends ActionBarActivity {
                             else{
                                 Toast.makeText(
                                         getActivity(),
-                                        "Kesalahan: Anda tidak tersambung ke internet",
+                                        "Kesalahan: Anda tidak tersambung ke internet.",
                                         Toast.LENGTH_SHORT
                                 ).show();
                             }

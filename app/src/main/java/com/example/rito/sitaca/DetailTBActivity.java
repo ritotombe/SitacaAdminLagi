@@ -155,12 +155,12 @@ public class DetailTBActivity extends ActionBarActivity {
             }
             if (String.valueOf(namaUser.getText()).equalsIgnoreCase("")) {
                 cek = false;
-                errorToast("Masukkan Pengguna");
+                errorToast("Kesalahan : Pengguna belum terisi.");
             }
 
             if (!cekUser(idPostUser) && !String.valueOf(namaUser.getText()).equalsIgnoreCase("")) {
                 cek = false;
-                errorToast("Pengguna yang anda pilih tidak tersedia.");
+                errorToast("Kesalahan : Pengguna yang anda pilih tidak tersedia.");
             }
 
             if (cek) {
@@ -180,7 +180,7 @@ public class DetailTBActivity extends ActionBarActivity {
                             pDialog.dismiss();
                             Log.d("asd", "" + data);
                             if (data == null) {
-                                errorToast("Kesalahan: TB tidak berhasil diubah");
+                                errorToast("Kesalahan: TB tidak berhasil diubah.");
                             } else {
                                 try {
                                     errorToast(data.get(0).toString());
@@ -196,7 +196,7 @@ public class DetailTBActivity extends ActionBarActivity {
                     };
                     requestData.execute();
                 } else {
-                    errorToast("Kesalahan : Anda tidak tersambung ke internet");
+                    errorToast("Kesalahan : Anda tidak tersambung ke internet.");
                 }
             }
 
@@ -210,7 +210,7 @@ public class DetailTBActivity extends ActionBarActivity {
                     "getdata.php",
                     params,
                     getActivity(),
-                    "Memuat User") {
+                    "Memuat Taman Baca") {
                 @Override
                 protected void onPostExecute(JSONArray data) {
                     pDialog.dismiss();
