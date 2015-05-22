@@ -172,7 +172,7 @@ public class AdminActivity extends ActionBarActivity {
                 params.add(new BasicNameValuePair("aksi", "hapus"));
                 params.add(new BasicNameValuePair("del_id", deleteId));
                 RequestData requestData = new RequestData(
-                        "http://ritotom.be/sitacaapi/userdao.php",
+                        "userdao.php",
                         params,
                         getActivity(),
                         "Menghapus Admin")
