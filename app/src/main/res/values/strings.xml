@@ -29,7 +29,7 @@
     <string name="app_not_available">Sorry, there\'s no web browser available</string>
     <string name="delButton">Delete</string>
     <string name="title_activity_ubah_user">Ubah Pengguna</string>
-    <string name="title_activity_user">User</string>
+    <string name="title_activity_user">Pengguna</string>
     <string name="title_activity_ubah_kategori">Ubah Kategori</string>
     <string name="title_activity_tambah_tb_sekitar">Tambah Taman Baca Sekitar</string>
     <string name="title_activity_ubah_tb_sekitar">Ubah Taman Baca Sekitar</string>
@@ -40,7 +40,7 @@
     <string name="title_activity_login">Login</string>
     <string name="title_activity_lihat_log_kegiatan">Log Kegiatan</string>
     <string name="title_activity_lihat_taman_baca">Taman Baca</string>
-    <string name="title_activity_terima_user">Terima User</string>
+    <string name="title_activity_terima_user">Terima Pengguna</string>
     <string name="title_activity_pengumuman">Pengumuman</string>
     <string name="title_activity_tambah_pengumuman">Tambah Pengumuman</string>
     <string name="title_activity_ubah_pengumuman">Ubah Pengumuman</string>

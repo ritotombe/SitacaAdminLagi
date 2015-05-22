@@ -179,7 +179,7 @@ public class UserActivity extends ActionBarActivity {
                         "userdao.php",
                         params,
                         getActivity(),
-                        "Menghapus User")
+                        "Menghapus Pengguna")
                 {
                     @Override
                     protected void onPostExecute(JSONArray data) {
@@ -227,7 +227,7 @@ public class UserActivity extends ActionBarActivity {
                     "getdata.php",
                     params,
                     getActivity(),
-                    "Memuat User") {
+                    "Memuat Pengguna") {
                 @Override
                 protected void onPostExecute(JSONArray data) {
                     pDialog.dismiss();
@@ -259,7 +259,7 @@ public class UserActivity extends ActionBarActivity {
                     {
                         Toast.makeText(
                                 getActivity(),
-                                "Tidak ada user.",
+                                "Tidak ada pengguna.",
                                 Toast.LENGTH_SHORT
                         ).show();
                     }
