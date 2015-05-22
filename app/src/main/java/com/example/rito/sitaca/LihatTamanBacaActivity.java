@@ -119,7 +119,7 @@ public class LihatTamanBacaActivity extends ActionBarActivity {
             {
                 Toast.makeText(
                         getApplicationContext(),
-                        "Peringatan: Belum ada taman baca yang dipilih",
+                        "Peringatan: Belum ada taman baca yang dipilih.",
                         Toast.LENGTH_SHORT
                 ).show();
             }
@@ -332,7 +332,7 @@ public class LihatTamanBacaActivity extends ActionBarActivity {
                     {
                         Toast.makeText(
                                 getActivity(),
-                                "Tidak Ada Taman Baca",
+                                "Tidak ada taman baca.",
                                 Toast.LENGTH_SHORT
                         ).show();
                     }
@@ -354,7 +354,7 @@ public class LihatTamanBacaActivity extends ActionBarActivity {
                         else{
                             Toast.makeText(
                                     getActivity(),
-                                    "Kesalahan: Anda tidak tersambung ke internet",
+                                    "Kesalahan: Anda tidak tersambung ke internet.",
                                     Toast.LENGTH_SHORT
                             ).show();
                         }
@@ -379,7 +379,7 @@ public class LihatTamanBacaActivity extends ActionBarActivity {
                                         else{
                                             Toast.makeText(
                                                     getActivity(),
-                                                    "Kesalahan: Anda tidak tersambung ke internet",
+                                                    "Kesalahan: Anda tidak tersambung ke internet.",
                                                     Toast.LENGTH_SHORT
                                             ).show();
                                         }
@@ -394,7 +394,7 @@ public class LihatTamanBacaActivity extends ActionBarActivity {
                                         else{
                                             Toast.makeText(
                                                     getActivity(),
-                                                    "Kesalahan: Anda tidak tersambung ke internet",
+                                                    "Kesalahan: Anda tidak tersambung ke internet.",
                                                     Toast.LENGTH_SHORT
                                             ).show();
                                         }
@@ -409,7 +409,7 @@ public class LihatTamanBacaActivity extends ActionBarActivity {
                                         else{
                                             Toast.makeText(
                                                     getActivity(),
-                                                    "Kesalahan: Anda tidak tersambung ke internet",
+                                                    "Kesalahan: Anda tidak tersambung ke internet.",
                                                     Toast.LENGTH_SHORT
                                             ).show();
                                         }
@@ -424,7 +424,7 @@ public class LihatTamanBacaActivity extends ActionBarActivity {
                                         else{
                                             Toast.makeText(
                                                     getActivity(),
-                                                    "Kesalahan: Anda tidak tersambung ke internet",
+                                                    "Kesalahan: Anda tidak tersambung ke internet.",
                                                     Toast.LENGTH_SHORT
                                             ).show();
                                         }

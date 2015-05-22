@@ -255,7 +255,7 @@ public class LogHarianActivity extends ActionBarActivity {
                     else {
                         Toast.makeText(
                                 getActivity(),
-                                "Tidak Ada Log Harian",
+                                "Tidak ada log harian.",
                                 Toast.LENGTH_SHORT
                         ).show();
                     }

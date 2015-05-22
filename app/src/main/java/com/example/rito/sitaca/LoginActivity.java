@@ -88,17 +88,17 @@ public class LoginActivity extends Activity {
         boolean goodToGo = true;
          if(emailLogin.getText().toString().equalsIgnoreCase(""))
          {
-             errorToast("Kesalahan : Email belum diisi");
+             errorToast("Kesalahan : Email belum terisi.");
              goodToGo = false;
          }
         else if(!isValidEmail(emailLogin.getText().toString()))
          {
-             errorToast("Kesalahan : Format email salah");
+             errorToast("Kesalahan : Format email tidak sesuai.");
              goodToGo = false;
          }
          if(passLogin.getText().toString().equalsIgnoreCase(""))
          {
-             errorToast("Kesalahan : Kata sandi belum diisi");
+             errorToast("Kesalahan : Kata sandi belum terisi.");
              goodToGo = false;
          }
 
@@ -116,7 +116,7 @@ public class LoginActivity extends Activity {
                         "getdata.php",
                         params,
                         this,
-                        "Otorisasi..")
+                        "Otorisasi")
                 {
                     @Override
                     protected void onPostExecute(JSONArray data) {
@@ -124,13 +124,13 @@ public class LoginActivity extends Activity {
                         pDialog.dismiss();
                         if(data == null)
                         {
-                            errorToast("Kesalahan : Email / Kata Sandi Salah");
+                            errorToast("Kesalahan : Email / kata sandi salah.");
                         }
                         else {
                             try {
                                 JSONObject o = data.getJSONObject(0);
                                 if (o.getInt("status") == 0) {
-                                    errorToast("Kesalahan : Anda belum diterima sebagai admin, silahkan hubungi admin lain");
+                                    errorToast("Kesalahan : Anda belum diterima sebagai admin, silahkan hubungi admin lain.");
                                 } else {
                                     SharedPreferences pref = getApplicationContext().getSharedPreferences("sitacaadmin", 0); // 0 - for private mode
                                     SharedPreferences.Editor editor = pref.edit();
@@ -142,7 +142,7 @@ public class LoginActivity extends Activity {
                                     editor.putString("jabatan",o.getString("jabatan"));
                                     editor.commit();
 
-                                    errorToast("Selamat Datang " + pref.getString("nama",null));
+                                    errorToast("Selamat datang " + pref.getString("nama",null));
                                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                     startActivity(intent);
                                     finish();
@@ -158,7 +158,7 @@ public class LoginActivity extends Activity {
             }
             else
             {
-                errorToast("Kesalahan : Anda sedang tidak tersambung ke internet");
+                errorToast("Kesalahan : Anda sedang tidak tersambung ke internet.");
             }
         }
     }
