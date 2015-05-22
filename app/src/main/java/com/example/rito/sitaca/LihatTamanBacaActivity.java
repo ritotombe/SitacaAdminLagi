@@ -275,7 +275,12 @@ public class LihatTamanBacaActivity extends ActionBarActivity {
                                     data.getJSONObject(0).toString() + 12312,
                                     Toast.LENGTH_SHORT
                             ).show();
+                            populateList();
                         } catch (JSONException e) {
+                            e.printStackTrace();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        } catch (ExecutionException e) {
                             e.printStackTrace();
                         }
                         try {
