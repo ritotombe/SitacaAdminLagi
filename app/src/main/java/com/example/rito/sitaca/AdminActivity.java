@@ -56,18 +56,6 @@ public class AdminActivity extends ActionBarActivity {
         }
     }
 
-    protected void onResume()
-    {
-        super.onResume();
-        try {
-            fragment.populateList();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
