@@ -113,7 +113,7 @@ public class LoginActivity extends Activity {
                 params.add(new BasicNameValuePair("pass", passLogin.getText().toString()));
                 Log.d("cekid", emailLogin.getText().toString() + passLogin.getText().toString());
                 RequestData requestData = new RequestData(
-                        "http://ritotom.be/sitacaapi/getdata.php",
+                        "getdata.php",
                         params,
                         this,
                         "Otorisasi..")

@@ -86,7 +86,7 @@ public class UbahPengumumanActivity extends ActionBarActivity {
             params.add(new BasicNameValuePair("isi", isi.getText().toString()));
             params.add(new BasicNameValuePair("id_admin", ""+id_admin));
             RequestData requestData = new RequestData(
-                    "http://ritotom.be/sitacaapi/pengumumandao.php",
+                    "pengumumandao.php",
                     params,
                     getActivity(),
                     "Mengubah Pengumuman") {
@@ -120,7 +120,7 @@ public class UbahPengumumanActivity extends ActionBarActivity {
             params.add(new BasicNameValuePair("aksi", "lihat"));
             params.add(new BasicNameValuePair("id", ""+id));
             RequestData requestData = new RequestData(
-                    "http://ritotom.be/sitacaapi/pengumumandao.php",
+                    "pengumumandao.php",
                     params,
                     getActivity(),
                     "Memuat Pengumuman")

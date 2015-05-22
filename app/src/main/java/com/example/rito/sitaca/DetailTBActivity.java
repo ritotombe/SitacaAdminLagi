@@ -171,7 +171,7 @@ public class DetailTBActivity extends ActionBarActivity {
                     params.add(new BasicNameValuePair("id_pre", "" + idPreUser));
                     params.add(new BasicNameValuePair("id_post", "" + idPostUser));
                     RequestData requestData = new RequestData(
-                            "http://ritotom.be/sitacaapi/tbdao.php",
+                            "tbdao.php",
                             params,
                             getActivity(),
                             "Membaharui Taman Baca") {
@@ -207,7 +207,7 @@ public class DetailTBActivity extends ActionBarActivity {
             List<NameValuePair> params = new ArrayList<NameValuePair>();
             params.add(new BasicNameValuePair("tag", "spinner_user"));
             RequestData requestData = new RequestData(
-                    "http://ritotom.be/sitacaapi/getdata.php",
+                    "getdata.php",
                     params,
                     getActivity(),
                     "Memuat User") {
@@ -250,7 +250,7 @@ public class DetailTBActivity extends ActionBarActivity {
             params.add(new BasicNameValuePair("aksi", "lihat"));
             params.add(new BasicNameValuePair("id", "" + id));
             RequestData requestData = new RequestData(
-                    "http://ritotom.be/sitacaapi/tbdao.php",
+                    "tbdao.php",
                     params,
                     getActivity(),
                     "Memuat Taman Baca") {

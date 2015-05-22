@@ -261,7 +261,7 @@ public class LihatTamanBacaActivity extends ActionBarActivity {
                 params.add(new BasicNameValuePair("aksi", "hapus"));
                 params.add(new BasicNameValuePair("del_id", deleteId));
                 RequestData requestData = new RequestData(
-                        "http://ritotom.be/sitacaapi/tbdao.php",
+                        "tbdao.php",
                         params,
                         getActivity(),
                         "Menghapus Taman Baca") {
@@ -298,7 +298,7 @@ public class LihatTamanBacaActivity extends ActionBarActivity {
             List<NameValuePair> params = new ArrayList<NameValuePair>();
             params.add(new BasicNameValuePair("tag", "taman_baca"));
             RequestData requestData = new RequestData(
-                    "http://ritotom.be/sitacaapi/getdata.php",
+                    "getdata.php",
                     params,
                     getActivity(),
                     "Memuat Taman Baca")

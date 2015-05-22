@@ -87,7 +87,7 @@ public class TambahPengumumanActivity extends ActionBarActivity {
             params.add(new BasicNameValuePair("judul", judulPengumuman.getText().toString()));
             params.add(new BasicNameValuePair("isi", isiPengumuman.getText().toString()));
             RequestData requestData = new RequestData(
-                    "http://ritotom.be/sitacaapi/pengumumandao.php",
+                    "pengumumandao.php",
                     params,
                     getActivity(),
                     "Membuat Pengumuman") {

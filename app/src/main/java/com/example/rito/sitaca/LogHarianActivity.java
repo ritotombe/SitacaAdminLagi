@@ -222,7 +222,7 @@ public class LogHarianActivity extends ActionBarActivity {
             params.add(new BasicNameValuePair("tag", "log_harian"));
             params.add(new BasicNameValuePair("id", "" + id));
             RequestData requestData = new RequestData(
-                    "http://ritotom.be/sitacaapi/getdata.php",
+                    "getdata.php",
                     params,
                     getActivity(),
                     "Memuat Log Harian") {

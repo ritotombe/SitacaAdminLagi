@@ -223,7 +223,7 @@ public class SummaryBukuActivity extends ActionBarActivity {
             params.add(new BasicNameValuePair("tag", "summary"));
             params.add(new BasicNameValuePair("id", "" + id));
             RequestData requestData = new RequestData(
-                    "http://ritotom.be/sitacaapi/getdata.php",
+                    "getdata.php",
                     params,
                     getActivity(),
                     "Daftar Ringkasan Buku") {

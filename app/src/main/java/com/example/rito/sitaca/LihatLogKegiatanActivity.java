@@ -139,7 +139,7 @@ public class LihatLogKegiatanActivity extends ActionBarActivity {
             params.add(new BasicNameValuePair("tag", "log_kegiatan"));
             params.add(new BasicNameValuePair("id", "" + id));
             RequestData requestData = new RequestData(
-                    "http://ritotom.be/sitacaapi/getdata.php",
+                    "getdata.php",
                     params,
                     getActivity(),
                     "Memuat Log Kegiatan")

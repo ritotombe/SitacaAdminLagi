@@ -155,7 +155,7 @@ public class TambahAdminActivity extends ActionBarActivity {
                         params.add(new BasicNameValuePair("email",String.valueOf(email.getText())));
                         params.add(new BasicNameValuePair("pass",  String.valueOf(pass.getText())));
                         RequestData requestData = new RequestData(
-                                "http://ritotom.be/sitacaapi/admindao.php",
+                                "admindao.php",
                                 params,
                                 getActivity(),
                                 "Membuat Admin") {

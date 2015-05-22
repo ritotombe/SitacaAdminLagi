@@ -265,7 +265,7 @@ public class PengumumanActivity extends ActionBarActivity {
                 params.add(new BasicNameValuePair("aksi", "hapus"));
                 params.add(new BasicNameValuePair("del_id", deleteId));
                 RequestData requestData = new RequestData(
-                        "http://ritotom.be/sitacaapi/pengumumandao.php",
+                        "pengumumandao.php",
                         params,
                         getActivity(),
                         "Menghapus Pengumuman") {
@@ -302,7 +302,7 @@ public class PengumumanActivity extends ActionBarActivity {
             List<NameValuePair> params = new ArrayList<NameValuePair>();
             params.add(new BasicNameValuePair("tag", "pengumuman"));
             RequestData requestData = new RequestData(
-                    "http://ritotom.be/sitacaapi/getdata.php",
+                    "getdata.php",
                     params,
                     getActivity(),
                     "Daftar Pengumuman")

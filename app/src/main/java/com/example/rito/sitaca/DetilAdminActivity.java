@@ -95,7 +95,7 @@ public class DetilAdminActivity extends ActionBarActivity {
             params.add(new BasicNameValuePair("aksi", "lihat"));
             params.add(new BasicNameValuePair("id", ""+id));
             RequestData requestData = new RequestData(
-                    "http://ritotom.be/sitacaapi/admindao.php",
+                    "admindao.php",
                     params,
                     getActivity(),
                     "Memuat Admin")
