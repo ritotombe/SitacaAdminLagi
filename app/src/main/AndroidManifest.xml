@@ -9,13 +9,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-    <android:uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="18" />
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <android:uses-permission
-        android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="18" />
+
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
 
@@ -46,7 +40,9 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".LihatLogKegiatanActivity"
@@ -69,14 +65,18 @@
         </activity>
         <activity
             android:name=".UserActivity"
-            android:label="@string/title_activity_user" >
+            android:label="@string/title_activity_user"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.rito.sitaca.MainActivity" />
         </activity>
         <activity
             android:name=".TerimaUserActivity"
-            android:label="@string/title_activity_terima_user" >
+            android:label="@string/title_activity_terima_user"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.rito.sitaca.UserActivity" />
@@ -85,7 +85,9 @@
         <activity
             android:name=".PengumumanActivity"
             android:label="@string/title_activity_pengumuman"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.rito.sitaca.MainActivity" />
@@ -93,7 +95,9 @@
         <activity
             android:name=".TambahPengumumanActivity"
             android:label="@string/title_activity_tambah_pengumuman"
-            android:parentActivityName=".PengumumanActivity" >
+            android:parentActivityName=".PengumumanActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.rito.sitaca.PengumumanActivity" />
@@ -101,7 +105,9 @@
         <activity
             android:name=".UbahPengumumanActivity"
             android:label="@string/title_activity_ubah_pengumuman"
-            android:parentActivityName=".PengumumanActivity" >
+            android:parentActivityName=".PengumumanActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.rito.sitaca.PengumumanActivity" />
@@ -109,42 +115,54 @@
         <activity
             android:name=".TambahAdminActivity"
             android:label="@string/title_activity_tambah_admin"
-            android:parentActivityName=".LoginActivity" >
+            android:parentActivityName=".LoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.rito.sitaca.LoginActivity" />
         </activity>
         <activity
             android:name=".DetailTBActivity"
-            android:label="@string/title_activity_detail_tb" >
+            android:label="@string/title_activity_detail_tb"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.rito.sitaca.LihatTamanBacaActivity" />
         </activity>
         <activity
             android:name=".LogHarianActivity"
-            android:label="@string/title_activity_log_harian" >
+            android:label="@string/title_activity_log_harian"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.rito.sitaca.LihatTamanBacaActivity" />
         </activity>
         <activity
             android:name=".SummaryBukuActivity"
-            android:label="@string/title_activity_summary_buku" >
+            android:label="@string/title_activity_summary_buku"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.rito.sitaca.LihatTamanBacaActivity" />
         </activity>
         <activity
             android:name=".RatingBukuActivity"
-            android:label="@string/title_activity_rating_buku" >
+            android:label="@string/title_activity_rating_buku"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.rito.sitaca.LihatTamanBacaActivity" />
         </activity>
         <activity
             android:name=".AdminActivity"
-            android:label="@string/title_activity_admin" >
+            android:label="@string/title_activity_admin"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.rito.sitaca.MainActivity" />
@@ -152,7 +170,9 @@
         <activity
             android:name=".DetilAdminActivity"
             android:label="@string/title_activity_detil_admin"
-            android:parentActivityName=".AdminActivity" >
+            android:parentActivityName=".AdminActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.rito.sitaca.AdminActivity" />
@@ -160,7 +180,9 @@
         <activity
             android:name=".TerimaAdminActivity"
             android:label="@string/title_activity_terima_admin"
-            android:parentActivityName=".AdminActivity" >
+            android:parentActivityName=".AdminActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.rito.sitaca.AdminActivity" />
@@ -168,7 +190,9 @@
         <activity
             android:name=".UbahAdminActivity"
             android:label="@string/title_activity_ubah_admin"
-            android:parentActivityName=".AdminActivity" >
+            android:parentActivityName=".AdminActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.rito.sitaca.AdminActivity" />

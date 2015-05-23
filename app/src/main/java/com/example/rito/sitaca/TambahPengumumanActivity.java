@@ -135,7 +135,16 @@ public class TambahPengumumanActivity extends ActionBarActivity {
                         goodToGo = false;
                     }
                     if(goodToGo){
-                        buatPengumuman();
+                        if(new Connection().checkConnection(getActivity())) {
+                            buatPengumuman();
+                        }
+                        else{
+                            Toast.makeText(
+                                    getActivity(),
+                                    "Kesalahan : Anda tidak tersambung ke internet.",
+                                    Toast.LENGTH_SHORT
+                            ).show();
+                        }
                     }
                 }
             });
