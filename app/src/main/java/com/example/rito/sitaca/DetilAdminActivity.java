@@ -96,7 +96,7 @@ public class DetilAdminActivity extends ActionBarActivity {
                     Log.d("asd", "" + data);
                     if(data == null)
                     {
-                        errorToast("Kesalahan: Admin tidak berhasil diubah");
+                        errorToast("Kesalahan: Admin tidak berhasil diterima");
                     }
                     else
                     {
