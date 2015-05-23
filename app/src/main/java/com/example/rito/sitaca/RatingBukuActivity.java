@@ -257,7 +257,7 @@ public class RatingBukuActivity extends ActionBarActivity {
                     }
 
 
-                    Collections.reverse(listBuku);
+                    //Collections.reverse(listBuku);
                     adapterBuku = new BukuListAdapter(listBuku);
                     mListViewBuku.setAdapter(adapterBuku);
 
