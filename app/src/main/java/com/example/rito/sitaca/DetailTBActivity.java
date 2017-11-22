@@ -280,7 +280,7 @@ public class DetailTBActivity extends ActionBarActivity {
                             facebook.setText(tamanBaca.getFacebook());
 
                             idPreUser = tamanBaca.getId_user();
-                            listUser.add(tamanBaca.getId_user() + " - " + tamanBaca.getNamaUser());
+                            //listUser.add(tamanBaca.getId_user() + " - " + tamanBaca.getNamaUser());
 
                         } catch (JSONException e) {
                             e.printStackTrace();
